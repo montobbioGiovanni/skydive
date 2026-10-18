@@ -1,0 +1,12 @@
+How do I register a tool in a Python MCP server?
+What is the stdio transport and how does the client start the server?
+How does a client find out which tools a server offers?
+What is sampling in MCP?
+How can a server ask the user for more information during a request?
+How do I cancel a long-running request?
+How do I resume a previous conversation with the Agent SDK?
+How can I stop the agent from running certain bash commands?
+How do I track how much my agent costs?
+How do I debug my MCP server with the Inspector?
+Come registro un tool in un server MCP in Python?
+What's the weather in Rome today?
