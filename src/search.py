@@ -35,4 +35,4 @@ def search_docs(query: str, k: int = TOP_K) -> list[dict]:
 if __name__ == "__main__":
     hits = search_docs("What is the difference between stdio and HTTP transport?")
     for hit in hits:
-        print(f"{hit['score']}  {hit['url']}  |  {hit['section_title']}")
+        print(f"{hit['text']} | {hit['score']}  {hit['url']}  |  {hit['section_title']}")
