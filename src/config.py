@@ -3,10 +3,11 @@ from dotenv import load_dotenv
 
 load_dotenv() # cerca il file .env e ne carica le variabili
 
-'''funzione che legge una variabile obbligatoria e restituisce un messaggio di errore se non è presente.
+
+def _required(name:str) -> str:
+    '''funzione che legge una variabile obbligatoria e restituisce un messaggio di errore se non è presente.
  Si mette il _ davanti per indicare che è una funzione interna a questo file, da non usare fuori.
 '''
-def _required(name:str) -> str:
     value = os.getenv(name) # legge la variabile
     if not value:
         raise RuntimeError(f"Variabile mancante nel file .env: {name}")
