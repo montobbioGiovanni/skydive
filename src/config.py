@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+from pathlib import Path 
 
 load_dotenv() # cerca il file .env e ne carica le variabili
 
@@ -13,5 +14,12 @@ def _required(name:str) -> str:
         raise RuntimeError(f"Variabile mancante nel file .env: {name}")
     return value
 
-ANTHROPIC_API_KEY = _required("ANTHROPIC_API_KEY")   # la leggiamo solo per controllare che ci sia
-CLAUDE_MODEL = _required("CLAUDE_MODEL")             # es. "claude-opus-5-5"
+ANTHROPIC_API_KEY = _required("ANTHROPIC_API_KEY")   
+CLAUDE_MODEL = _required("CLAUDE_MODEL")            
+
+
+
+PROJECT_DIR = Path(__file__).resolve().parent.parent  
+CHROMA_DIR = PROJECT_DIR / "data" / "chroma"           # dove Chroma salva l'indice 
+COLLECTION_NAME = "docs"                               # il nome della "tabella" dentro Chroma
+TOP_K = 5                                              # quanti risultati restituisce la ricerca, di default
