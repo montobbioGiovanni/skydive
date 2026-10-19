@@ -1,0 +1,4 @@
+What's the weather in Rome today?
+How do I deploy an MCP server on AWS Lambda?
+What is sampling in MCP and how much does a sampling request cost?
+Come registro un tool in un server MCP in Python?
